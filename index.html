@@ -3,27 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Google Image Search</title>
+  <title>Jednoduché rychlé vyhledávání</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <a class="top-link" href="index.html">Google Search</a>
+<body class="home-page">
+  <nav aria-label="Další stránky" style="position: absolute; top: 20px; right: 24px; display: flex; gap: 20px;">
+    <a href="image.html" style="color: #144483; text-decoration: none;">Obrázky</a>
+    <a href="advanced.html" style="color: #6185b5; text-decoration: none;">Pokročilé</a>
+  </nav>
 
-  <main>
-    <h1>Google</h1>
-    <p class="page-subtitle">Vyhledávání obrázků</p>
+  <main class="home-main">
+    <h1 class="home-logo" aria-label="Google">
+      <span class="logo-blue">G</span><span class="logo-red">o</span><span class="logo-yellow">o</span><span class="logo-blue">g</span><span class="logo-green">l</span><span class="logo-red">e</span>
+    </h1>
 
-    <form action="https://www.google.com/search" method="get">
-      <label for="image-search">Jaký obrázek hledáte?</label>
+    <form class="home-form" action="https://www.google.com/search" method="get">
+      <label for="search">Co chcete vyhledat?</label>
       <input
         type="search"
-        id="image-search"
+        id="search"
         name="q"
         placeholder="Zadejte hledaný text"
         required
       >
-      <input type="hidden" name="tbm" value="isch">
-      <button type="submit">Hledat obrázky</button>
+      <div class="home-buttons">
+        <button type="submit">Hledat Googlem</button>
+        <button type="submit" name="btnI" value="I'm Feeling Lucky">Cítím se šťastný</button>
+      </div>
     </form>
   </main>
 </body>
